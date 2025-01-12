@@ -27,6 +27,7 @@ def generate_new_dict(tests_dict, values_dict):
         if 'values' in test:
             generate_new_dict(test['values'], values_dict)
 
+
 try:
     tests_file = input("Введите имя файла tests.json: ")
     values_file = input("Введите имя файла values.json: ")
