@@ -3,13 +3,14 @@ accumulated_mass = []
 input_date = []
 tmp = 0
 
-try:
-    for i in input().split():
-        input_date.append(int(i))
 
-    for i in range(1, input_date[0] + 1):
-        mass.append(i)
+for i in input().split():
+    input_date.append(int(i))
 
+for i in range(1, input_date[0] + 1):
+    mass.append(i)
+
+if input_date[0] > 1:
     while True:
         tmp_lst = []
         for i in range(input_date[1]):
@@ -25,6 +26,7 @@ try:
 
     for i in accumulated_mass:
         print(i[0], end="")
+else:
+    print("Длина массива должна составлять более 1 элемента")
 
-except IndexError:
-    print("Введите цифровые значения выше 0")
+
